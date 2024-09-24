@@ -1,9 +1,10 @@
-bases:
+resources:
   - ../../base
 
-namespace: dev 
-
 patches:
-  - replicas.yaml
+  - path: replicas.yaml
+    target:
+      kind: Deployment
+      name: web-server
 
 
